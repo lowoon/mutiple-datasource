@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    hikari:
+      customer:
+        jdbc-url: "jdbc:h2:mem:customerdb"
+        username: "customer"
+        driver-class-name: "org.h2.Driver"
+
+      user:
+        jdbc-url: "jdbc:h2:mem:userdb"
+        username: "user"
+        driver-class-name: "org.h2.Driver"
